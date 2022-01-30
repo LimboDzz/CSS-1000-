@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bg:#2abbff;
+    font-size: 30px;
+}
+body {
+    height: 200vh;
+    background: #111;
+}
+section {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 200px);
+    background: var(--bg);
+}
+section .curve {
+    position: absolute;
+    bottom: -200px;
+    height: 200px;
+    width: 100%;
+    transform-origin: top;
+}
+section .curve img {
+    width: 100%;
+    height: 100%;
+}
+hgroup {
+    overflow:hidden;
+    color: #fff;
+    height: 100%;
+    font-size: 1.5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    line-height: 3rem;
+    text-shadow: 10px 10px 0px rgb(14, 21, 65);
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+    :root {
+        font-size: 20px;
+    }
+}
+@media (min-width: 2000px) {
+    :root {
+        font-size: 40px;
+    }
+}
+@media (max-width: 700px) {
+    hgroup {
+        display: none;
+    }
+}

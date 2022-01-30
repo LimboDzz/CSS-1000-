@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+
+    <body>
+        <section>
+            <hgroup>
+                <h1>CSS3 Transform Effects on Scroll </h1>
+                <h2>Html CSS Vanilla Javascript</h2>
+            </hgroup>
+            <span class="curve">
+                <img src="curve.png" alt="">
+            </span>
+        </section>
+    </body>
+    <script>
+        window.addEventListener("scroll", () => {
+            let curve = document.querySelector(".curve");
+            let y = window.scrollY;
+            curve.style.transform = `scale(1,${1 - y /(window.innerWidth/4)})`
+
+        })
+    </script>
+
+</html>
