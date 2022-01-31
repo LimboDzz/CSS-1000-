@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 200vh;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+hgroup {
+    z-index: 1;
+    font-family: impact;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background: rgb(255, 255, 255);
+    mix-blend-mode: soft-light;
+    padding: 30px;
+}
+.upper {
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 4em;
+}

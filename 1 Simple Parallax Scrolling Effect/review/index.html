@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <section>
+        <img src="../moon.png" alt="" id="moon">
+        <img src="../mountain.png" alt="" id="mountain">
+        <img src="../road.png" alt="" id="road">
+        <img src="../bg.jpg" alt="" id="bg">
+        <h1 id="text">Moon Light</h1>
+    </section>
+    <script>
+        let moon=document.getElementById("moon");
+        let road=document.getElementById("road");
+        let mountain=document.getElementById("mountain");
+        let bg=document.getElementById("bg");
+        let text=document.getElementById("text");
+        window.addEventListener("scroll",()=>{
+            let y=window.scrollY;
+            moon.style.left=-y+"px";
+            bg.style.top=y*0.5+"px";
+            text.style.top=y+"px";
+            mountain.style.top=-y*0.15+"px";
+        })
+    </script>
+</body>
+</html>

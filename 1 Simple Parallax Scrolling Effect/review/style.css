@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bg: #152e3d;
+}
+body {
+    height: 200vh;
+    background: var(--bg);
+}
+section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    position: relative;
+}
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+img#bg {
+    z-index: -1;
+}
+section::before {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,var(--bg),transparent);
+    z-index: 10;
+}
+section::after {
+    content: "";
+    background: var(--bg);
+    mix-blend-mode: color;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#text {
+    font-size: 9em;
+    font-family: impact;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+}
+#road {
+    z-index: 2;
+}
