@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+}
+#bg {
+    height: 100%;
+    position: relative;
+    background: url(./bg.jpg);
+    background-size: cover;
+    /* object-fit: cover; */
+    background-repeat: repeat-x;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate{
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: calc(100% - 100vw) 0;
+    }
+}
+#car {
+    position: fixed;
+    bottom: 10vh;
+    left: 5vw;
+    background: url(./Layer\ 3.png);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    height: 15vmin;
+    width: 30vmin;
+    background-size:contain;
+}

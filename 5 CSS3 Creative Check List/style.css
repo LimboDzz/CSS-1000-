@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bg: #fcc;
+    --fg: #333;
+    color: #fff;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+}
+
+.list {
+    width: 500px;
+    height: 400px;
+    background: var(--fg);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    border-top: #fff solid 70px;
+    padding: 0 0 20px 0;
+}
+
+h2 {
+    width: 80%;
+    height: 1.8em;
+    font-size: 2em;
+    font-family: impact;
+    line-height: 2em;
+    text-align: center;
+    border-bottom: #fff solid 4px;
+    margin: 0 auto;
+}
+label {
+    position: relative;
+    margin-left: 15%;
+    font-size: 1.2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    /* pointer-events: none; */
+    user-select: none;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    appearance: none;
+}
+.list i {
+    width: 25px;height: 25px;
+    font-size: 25px;
+    color: #fff;
+    border: #fff 2px solid;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: rotate(0);
+}
+.list input[type=checkbox]:checked ~ i {
+    border-top: none;
+    border-right: none;
+    height: 15px;
+    width: 25px;
+    transform: rotate(-50grad);
+}
+.list input[type=checkbox]:checked ~ span {
+    opacity: .5;
+}
+
+.list input[type=checkbox]:checked ~ span::before {
+    transform: scaleX(1);
+    /* transform-origin: right; */
+}
+.list span {
+    position: absolute;
+    left: 45px;
+    top: 0;
+}
+.list input[type=checkbox] ~ span::before {
+    content:"";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #fff;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: .5s;
+}
