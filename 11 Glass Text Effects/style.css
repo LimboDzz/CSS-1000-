@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: url("bg1.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 12em;
+    height: 40vh;
+    line-height: 20vh;
+    font-family: impact;
+    /* white-space: nowrap; */
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5vh 0;
+    mix-blend-mode: overlay;
+    text-align: center;
+}
