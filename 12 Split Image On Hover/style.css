@@ -1,4 +1,72 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg: #f7e78e;
+}
+body {
+  height: 100vh;
+  background: var(--bg);
+  color: var(--bg);
+}
+
+section {
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: impact;
+  text-align: center;
+}
+
+section::before {
+  content: "";
+  background: url("bg.jpeg") 0 0 no-repeat;
+  background-size: 200% 100%;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: bottom;
+  transition: 0.5s;
+}
+section::after {
+  content: "";
+  background: url("bg.jpeg") 100% 0 no-repeat;
+  background-size: 200% 100%;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: top;
+  transition: 0.5s;
+}
+section:hover::before {
+  transform: rotateX(90deg) translateY(50%);
+}
+section:hover::after {
+  transform: rotateX(90deg) translateY(-50%);
+}
+
+body > * {
+  text-shadow: 2px 2px 0 rgb(104, 104, 241);
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  padding: 20px 0;
+}
+
+p {
+  padding: 0 50px;
 }

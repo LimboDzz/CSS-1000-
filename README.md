@@ -92,3 +92,18 @@ innerText {
 - mix-blend-mode: overlay;
 
 ## 12 Split Image On Hover
+
+- background-size: 200% 100%;
+- transform: rotateX(90deg);
+
+## 13 Pure CSS Neon Light Text Effects
+
+```html
+<h1 class="neon" data-text="[Neon_]">[Neon_]</h1>
+```
+
+```css
+background: url("brick.jpeg") no-repeat center center;
+background-color: rgb(28, 28, 29);
+background-blend-mode: multiply;
+```
