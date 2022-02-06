@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg: #111;
+  --fg: #fff;
+  --active: rgb(255, 103, 57);
+}
+body {
+  height: 100vh;
+  background: url("blur.png") no-repeat;
+  background-size: cover;
+}
+
+.title {
+  font-size: 4em;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 100px;
+  line-height: 100px;
+  text-transform: uppercase;
+  font-family: impact;
+  text-align: center;
+  color: #fff;
+  text-shadow: var(--bg) 5px 5px;
+  position: absolute;
+  top: -100px;
+  user-select: none;
+  z-index: -1;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 500px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid var(--bg);
+}
+
+.container > * {
+  width: 50%;
+  height: 100%;
+}
+
+.left {
+  background: url("bg.png") no-repeat;
+  background-size: cover;
+}
+
+.right {
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+  color: var(--fg);
+}
+.right label {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column-reverse;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+label p {
+  flex: 2;
+  line-height: 40px;
+}
+label input {
+  background: #fcc;
+  flex: 3;
+  padding: 0 20px;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px #dcc solid;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+label input::placeholder {
+  color: var(--fg);
+  font-weight: normal;
+}
+
+label input:focus {
+  border-color: var(--active);
+}
+label input:focus + p{
+    color: var(--active);
+}
+label input::selection {
+    background: var(--active);
+}
+
+#submit {
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-family: impact;
+  font-size: 2em;
+  /* font-stretch: expanded; */
+  border-radius: 2px;
+}
+#submit:hover {
+  background: var(--active);
+  outline: none;
+  border: none;
+}
+
+.right a {
+  color: var(--fg);
+  align-self: flex-start;
+}
+.right a:hover {
+  color: var(--active);
+}
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

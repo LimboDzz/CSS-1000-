@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script src="https://kit.fontawesome.com/ea4ba7638e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <body>
+        <div class="wrapper">
+            <div class="icon" onclick="randomProfile()">
+                <i class="fas fa-random"></i>
+            </div>
+            <h1>log in here</h1>
+            <form action="#">
+                <label for="email">
+                    <input type="email" name="email" id="email" placeholder="Please input your email">
+                    <p>email</p>
+                </label>
+                <label for="password">
+                    <input type="password" name="password" id="password" placeholder="Please input your password">
+                    <p>password</p>
+                </label>
+                <input type="submit" value="Sign In">
+                <div class="links">
+                    <a href="#">forget password</a>
+                    <a href="#" onclick="reset()">Reset</a>
+                </div>
+            </form>
+        </div>
+        <script>
+            let inputs=document.querySelectorAll("label input");
+            let icon=document.querySelector(".icon");
+            let count=0;
+            function reset(){
+                inputs.forEach(input=>{
+                    input.value="";
+                })
+            }
+            function randomProfile(){
+                icon.style.backgroundImage=`url(./icons/${count++%7+1}.png)`;
+            }
+        </script>
+    </body>
+
+</html>

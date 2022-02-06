@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://kit.fontawesome.com/ea4ba7638e.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="container">
+        <h1 class="title">sign in form</h1>
+        <div class="left"></div>
+        <form class="right">
+            <label for="username">
+                <input type="text" name="username" required placeholder="Please input your username.">
+                <p>Username</p>
+            </label>
+            <label for="password">
+                <input type="password" name="password" required placeholder="Please input your password.">
+                <p>Password</p>
+            </label>
+            <input id="submit" type="submit" value="SUBMIT">
+            <div class="links">
+                <a href="#">Forget Password</a>
+                <a href="#" onclick="reset()">Reset</a>
+            </div>
+        </form>
+    </div>
+<script>
+    let inputs=document.querySelectorAll(".right label input");
+    function reset(){
+        inputs.forEach(input=>{
+            input.value="";
+        })
+    }
+</script>
+</body>
+</html>
