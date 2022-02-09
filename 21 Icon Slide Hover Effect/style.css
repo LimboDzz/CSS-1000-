@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: rgb(255, 225, 225);
+}
+ul {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+}
+ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+ul li i {
+    font-size: 6em;
+    transition: .5s;
+    
+}
+
+ul li span {
+    opacity: 0;
+    font-size: 1em;
+    transition: .5s;
+    transform: translateY(100%);
+}
+ul li:hover i {
+    font-size: 4em;
+}
+ul li:hover span {
+    opacity: 1;
+    font-size: 1.2em;
+    transform: translateY(0);
+}
