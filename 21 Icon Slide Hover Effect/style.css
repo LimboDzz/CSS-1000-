@@ -4,7 +4,7 @@
 }
 body {
     height: 100vh;
-    background: rgb(255, 225, 225);
+    background: rgb(107, 0, 0);
 }
 ul {
     width: 800px;
@@ -22,11 +22,11 @@ ul li {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: blanchedalmond;
 }
 ul li i {
     font-size: 6em;
     transition: .5s;
-    
 }
 
 ul li span {
@@ -34,6 +34,8 @@ ul li span {
     font-size: 1em;
     transition: .5s;
     transform: translateY(100%);
+    text-transform: capitalize;
+    font-family: impact;
 }
 ul li:hover i {
     font-size: 4em;
