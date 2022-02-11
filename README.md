@@ -107,3 +107,13 @@ background: url("brick.jpeg") no-repeat center center;
 background-color: rgb(28, 28, 29);
 background-blend-mode: multiply;
 ```
+## 22 CSS Loader Animation
+- animation pertaining to transform will interfere with the transform:translate(-50%,-50%) set to center your elem.
+
+## 23 Css Scrolling Effect
+```css
+/* Keyword values */
+background-attachment: scroll;
+background-attachment: fixed;
+background-attachment: local;
+```
