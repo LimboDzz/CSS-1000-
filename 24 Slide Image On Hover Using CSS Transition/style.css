@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+}
+.slide {
+    width: 400px;
+    height: 150px;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.slide h1 {
+    width: 100%;
+    height: 100%;
+    line-height: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 7em;
+    transition: .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.slide h1:nth-child(1) {
+    background: #fcc;
+    color: #ccf;
+}
+.slide h1:nth-child(2) {
+    background: #ccf;
+    color: #fcc;
+}
+
+.slide:hover h1 {
+    transform: translateY(-100%);
+}
