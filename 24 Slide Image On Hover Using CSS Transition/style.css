@@ -27,12 +27,12 @@ body {
 }
 
 .slide h1:nth-child(1) {
-    background: #fcc;
-    color: #ccf;
+    background: #f55;
+    color: #fff;
 }
 .slide h1:nth-child(2) {
-    background: #ccf;
-    color: #fcc;
+    background: #55f;
+    color: #000;
 }
 
 .slide:hover h1 {
