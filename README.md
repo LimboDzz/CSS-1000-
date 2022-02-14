@@ -117,3 +117,12 @@ background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
 ```
+
+## 54 Css Angled Div Shape
+```css
+section .imgBox {
+    border-left: 100px solid #000;
+    border-bottom: 20vmax solid transparent;
+}
+```
+### [Responsive Razor Slanted Div Shape - My Tricks](https://www.youtube.com/watch?v=jlfCGHLusYA)
