@@ -126,3 +126,11 @@ section .imgBox {
 }
 ```
 ### [Responsive Razor Slanted Div Shape - My Tricks](https://www.youtube.com/watch?v=jlfCGHLusYA)
+
+## 58
+```css
+.container{
+  perspective: 400000px;
+  transform-style: preserve-3d;
+}
+``` 
