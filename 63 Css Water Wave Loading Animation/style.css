@@ -1,4 +1,60 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --main: #4973ff;
+}
+
+.circle {
+  width: 50vmin;
+  height: 50vmin;
+  box-shadow: 0 0 0 20px var(--main);
+  border-radius: 50%;
+  border: solid #fff 20px;
+}
+
+.waving {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--main);
+  box-shadow: inset 0 0 70px 0 #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.waving::before,
+.waving::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -75%);
+  animation: ani 7s linear infinite;
+}
+.waving::before {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 45%;
+}
+
+.waving::after {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 40%;
+}
+
+@keyframes ani {
+  from {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
 }

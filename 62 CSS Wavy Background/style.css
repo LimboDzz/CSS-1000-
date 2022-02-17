@@ -2,3 +2,24 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    height: 200vh;
+}
+
+.wave {
+    position: relative;
+    height: 70vh;
+    background: linear-gradient(to right,rgb(161, 161, 243),rgb(255, 182, 182));
+}
+
+.wave::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: url(wave.png) no-repeat left top;
+    background-size: cover;
+
+}

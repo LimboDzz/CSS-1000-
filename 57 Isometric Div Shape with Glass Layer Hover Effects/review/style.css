@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: rgb(216, 202, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pers {
+  perspective: 40000px;
+  width: 50vmin;
+  height: 50vmin;
+  transform-style: preserve-3d;
+  transform: rotate3d(1, 0, 1, 45deg);
+}
+
+.pers > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 1s;
+}
+.shadow {
+  background: rgba(26, 6, 6, 0.658);
+  filter: blur(7px);
+  z-index: -1;
+  transform: translateZ(0px);
+}
+.flat {
+  background: rgb(202, 91, 178);
+  transform: translateZ(50px);
+}
+.floating {
+  background: rgba(175, 235, 37, 0.438);
+  transform: translateZ(100px);
+  z-index: 1;
+}
+
+.pers:hover > div:nth-child(n+2) {
+  transform: translateZ(10px);
+}
