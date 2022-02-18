@@ -1,4 +1,53 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+:root {
+  --bg: #c6c6c6;
+  --bdr: rgb(108, 179, 245);
+  --shd: rgba(5, 23, 56, 0.529);
+  --inset: rgba(0, 0, 0, 0.2);
+  --checked: #03a9f4;
+}
+.center input {
+  appearance: none;
+  width: 90px;
+  height: 50px;
+  border-radius: 40px;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: var(--bg);
+  box-shadow: inset 0 0 5px var(--inset); */
+  /* transition: background-color .5s cubic-bezier(.7,0,.9,.3) .2s; */
+  /* transition: .5s;
+}
+
+.center input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%; */
+  /* box-shadow: 0 2px 5px var(--shd); */
+  /* transition: 1s;
+  transform: scale(1.05);
+}
+
+.center input:checked {
+  background: var(--checked);
+}
+
+.center input:checked::before {
+  left: 45px;
+} */
